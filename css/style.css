@@ -1,0 +1,178 @@
+@font-face {
+    font-family: 'Lucida Sans Regular';
+    src: url('../fonts/Lucida Sans Regular.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+   }
+   body {
+    min-width: 312px;
+    background-color: #f7fbfd;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-family: 'Lucida Sans Regular';
+    margin: 0;
+   }
+
+   /* Layout */
+   .well {background-color: #ffffff; border: 0; border-radius: 0; margin-top: 10px; border: 2px solid #ecf0f1; padding: 0;}
+   .navbar {margin: 0;}
+   .container {width: 100%; padding-right: 0; padding-left: 0;}
+   .row {margin: 0;}
+   .navbar {height: 80px; border: 2px solid #ecf0f1; background-color: #ffffff; }
+   .navbar-brand img { width: 80px; height: 50px; }
+   #padding-top { padding-top: 130px;}
+   #padding-bottom { padding-top: 5px;}
+   #mobile {padding-left: 15px; padding-right: 15px;}
+   .navbar-brand { margin-left: 0 !important;}
+   .remove-mobile { display: inline;}
+
+
+   h5 {margin-top: 0; font-weight: 700; color: #4c4c4c;}
+
+   /* Header */
+    .card-header { padding-top: 15px;}
+    #header-logo img { width: 50px; height: 50px;}
+    #header-logo {width: 50px; height: 50px;}
+    #header-title { padding-left: 10px; margin-bottom: 0;}
+    #sponsored { margin-top: 0; padding-left: 10px; display: inline;}
+    .card-heading {padding-top: 10px;}
+    .inline { color: #aaa; font-size: 12px;}
+    .inline a {color: #aaa; text-decoration: none;}
+    .inline a:hover {color: #3498db;}
+    .glyphicon-globe {padding-left: 10px;}
+    #top-performer {position: relative; font-size: 11px; color: green; font-weight: 700; margin-left: 50px; bottom: 19px;}
+    #results {color: #3498db; font-size: 11px; font-weight: 700; position: relative; bottom: 27px; margin-left: 50px;}
+    .glyphicon-ok-sign {position: relative; color: green; font-size: 18px; left: 25px;}
+    .glyphicon-stats {font-size: 18px; right: 25px; color: #3498db;}
+    .performance-holder {float: right; padding-right: 15px; width: auto; height: 35px; padding-left: 0}
+    .title-holder {width: auto; padding-right: 0;}
+    .box-performer {height: auto; width: 150px; position: absolute; border: 2px solid #ecf0f1; background-color: green; text-align: center; font-weight: 700; top:-37px; left: -93px; color: white; font-size: 13px;}
+    .atl-logo-holder {margin-top: 10px;}
+    #atl-logo {padding-left: 10px;}
+    #plus {font-size: 20px; font-weight: 900; color: #aaa;}
+
+    /* Heading */
+    .card-heading {font-size: 13px;}
+
+   /* Border */
+    .border {border: 2px solid #ecf0f1; margin-right: 15px; margin-left: 15px; 
+      -webkit-box-shadow: 1px 1px 5px 0px rgba(199,199,199,1);
+-moz-box-shadow: 1px 1px 5px 0px rgba(199,199,199,1);
+box-shadow: 1px 1px 5px 0px rgba(199,199,199,1);}
+  
+    .border:hover {-webkit-box-shadow: 1px 1px 5px 1px rgba(194,194,194,1);
+-moz-box-shadow: 1px 1px 5px 1px rgba(194,194,194,1);
+box-shadow: 1px 1px 5px 1px rgba(194,194,194,1);}
+
+   /* Image */
+    .foo { display: block; width: 100%; height: auto; position: relative; overflow: hidden; padding: 52.356% 0 0 0; }
+    .foo img { display: block; width: 100%; position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
+
+   /* Title */
+   .card-title h4 {font-family: 'Times New Roman'; font-size:19px; font-weight: normal;}
+
+   /* Desc */
+   .card-desc {font-size: 13px;}
+
+   /* Link */
+   .card-link a { font-size: 10px; color: #aaa; text-decoration: none;}
+   .card-link :hover {color: #3498db;}
+
+
+   /* Buttons */
+   .card-buttons {padding-left: 0; padding-top: 5px; padding-bottom: 5px; display: -webkit-box; display: flex; font-weight: 700; font-size: 12px;}
+   p#btn {margin: 0; padding-left: 5px; display: inline;}
+   #btn-holder { padding-left: 35px;}
+   .card-buttons a {text-decoration: none; color: #aaa;}
+   .card-buttons a:hover {color: #3498db;}
+   .padding-none {padding-left: 0 !important; padding-right: 0 !important;}
+   .btn1 {padding-left: 10px;}
+   .padding-none {padding-left: 10px !important; padding-right: 10px !important; width: auto;}
+
+   /* Caret Line*/
+   .caret-line {padding-left: 10px;}
+   #caret-text {display: inline; font-size: 15px; font-weight: 700; padding-left: 15px; color: #aaa;}
+   .glyphicon-triangle-top {top: 7px; font-size: 25px; color: green;}
+
+   /* Card OFF/ON */
+   .cardoff, .cardoff2, .cardoff3 {opacity: 1;}
+   .cardon {opacity: 1;}
+
+   /* CHART 1 */
+   .slide1 { position: relative; width: 100%; overflow: hidden; right: 25px;}
+   .slide1.showtable {height: 0;}
+    #chart1 {height: 300px;}
+
+   /* CHART 2 */
+   .slide2 { position: relative; width: 100%; overflow: hidden; right: 25px;}
+   .slide2.showtable {height: 0;}
+    #chart2 {height: 300px;}
+
+       /* CHART 2 */
+   .slide3 { position: relative; width: 100%; overflow: hidden; right: 25px;}
+   .slide3.showtable {height: 0;}
+    #chart3 {height: 300px;}
+
+    #slide, #slide2, #slide3 {cursor: pointer;}
+    .nvd3.nv-noData {font-size: 14.5px !important;}
+
+    /* Tooltip */
+    .nvtooltip h6 { padding-left: 10px; font-weight: 900; color: #aaa;}
+    .nvtooltip ul { padding-left: 10px; }
+    .nvtooltip h5 { padding-right: 10px; display: initial; font-weight: normal;}
+    .nvtooltip p { font-weight: 900; color: #5a5a5a; padding-right: 10px !important; padding-left: 0 !important; display: initial;}
+
+    .dr-btn {background: white; border: 2px solid #ecf0f1; margin: 15px 15px 0px 15px; text-align: center; padding: 5px; font-weight: 900; cursor: pointer; color: #7f8c8d; display: none !important;}
+    #dr-caret {padding-left: 10px; top: 3px; font-size: 17px;}
+
+
+  #menu p {display: none;}
+  .remove-mobile {display: none;}
+  .card-desc {display: none;}
+
+   @media (max-width: 360px) {
+
+   }
+
+   @media (max-width: 460px) {
+   .container {padding-left: 0; padding-right: 0;}
+    #mobile {padding-right: 0; padding-left: 0;}
+    .btn1 {padding-left: 10px;}
+    .btn2 {padding-left: 10px;}
+    .btn3 {padding-left: 35px;}
+    .padding-none {padding-left: 0px !important; padding-right: 0px !important; width: 35%;}
+    .dr-btn {margin-left: 0; margin-right: 0;}
+    .nvd3.nv-noData {font-size: 10px !important;}
+
+   }
+
+   @media (max-width: 860px) {
+    #mobile {width: 100% !important; margin-top: 20px;}
+    .remove-mobile {display: none;}
+    .card-link { text-transform: lowercase; font-size: 12px;}
+    .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {padding-right: 10px; padding-left: 10px;}
+    .border {margin-right: 10px; margin-left: 10px;}
+    .foo img {border-radius: 4px;}
+    .border {border-radius: 4px;}
+    .box-performer {left: -87.5px !important;}
+    .cardoff, .cardoff2, .cardoff3 { opacity: 1;}
+    .dr-btn {display: block;}
+   }
+
+   @media (max-width: 1024px) {
+    .card-desc {display: none;}
+    .card-title h4 {font-size: 14px; font-weight: normal; padding-top: 5px;}
+    .card-link {padding-bottom: 5px;}
+    #link1 {font-size: 10px;}
+    #link2 {display: none;}
+    #btn-holder {padding-left: 14px;}
+    .card-title h4 {font-family: 'Lucida Sans Regular'; font-size: 12px; font-weight: 700; margin-bottom: 0; margin-top: 5px;}
+   
+   }
+
+   @media (min-width: 1680px) {
+    .card-desc {font-size: 16px;}
+    #heading {font-size: 16px;}
+    .card-link { padding-bottom: 10px;}
+    #title {margin-top: 15px; margin-bottom: 15px; font-size: 24px;}
+   } 

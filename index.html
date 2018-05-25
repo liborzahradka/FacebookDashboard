@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  	<!-- Website Title & Description for Search Engine purposes -->
+  	<title>Facebook Cards</title>
+  	<meta name="description" content="">
+  	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/nv.d3.css" />
+  	<link href="css/style.css" rel="stylesheet">
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.animateNumbers.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.6/nv.d3.min.js"></script>
+  </head>
+
+  <body>
+  	<div class="container">
+  		<div class="navbar navbar-fixed-top">
+  			<div class="container">
+  				<a class="pull-left navbar-brand" href="/">
+  					<img src="images/primo-logo.png" alt="Your Logo">
+  				</a>
+  				<div class="atl-logo-holder"><span id="plus">+</span>
+  					<img id="atl-logo" src="images/TheAtlanticLogo.png">
+  				</div>
+  			</div>
+  		</div>
+  		<div class="row" id="padding-top">
+  			<div class="row caret-line">
+  				<div class="col-xs-12"> <span class="glyphicon glyphicon-triangle-top"></span>
+  					<p id="caret-text">The Atlantic Creatives Preview</p>
+  				</div>
+  			</div>
+  			<div class="dr-btn" id="dr-btn">SHOW OTHER STORIES<span class="glyphicon glyphicon-chevron-down" id="dr-caret"></span>
+  			</div>
+  			<div class="cardoff">
+  				<div class="col-xs-4" id="mobile">
+  					<div class="well" id="padding-row">
+  						<div class="row card-header">
+  							<div class="col-xs-2" id="header-logo">
+  								<img id="header-logo" src="images/atlantic.jpg">
+  							</div>
+  							<div class="col-xs-4 title-holder">
+  								<h5 id="header-title">Trending</h5>
+  								<div class="inline">
+  									<a href="#">
+  										<p class="" id="sponsored">Sponsored</p><span class="glyphicon glyphicon-globe"></span>
+  									</a>
+  								</div>
+  							</div>
+  						</div>
+  						<div class="row card-heading">
+  							<div class="col-xs-12">
+  								<p id="heading">More High Tech = Worse Team Dynamics?</p>
+  							</div>
+  						</div>
+  						<div class="border">
+  							<a class="link" href="http:.theatlantic.com/sponsored/xerox-working-better/collaborators-without-borders/646/?preview=NEtZwpeBmZRylDL1RlJ_bxordVk">
+  								<div class="row foo">
+  									<img src="images/test.jpg">
+  								</div>
+  							</a>
+  							<div class="row card-title">
+  								<div class="col-xs-12">
+  									<h4 id="title">What businesses get wrong about keeping teams productive (Sponsor: Xerox)</h4>
+  								</div>
+  							</div>
+  							<div class="row card-desc">
+  								<div class="col-xs-12">
+  									<p id="desc">The best description you can think of will appear here. Even if you can’t think of a great description, we’ll scrape the description from the meta data in the pager header. This will save you time and steps when packing an ad…</p>
+  								</div>
+  							</div>
+  							<div class="row card-link">
+  								<div class="col-xs-12">
+  									<a id="link1" href="#">
+  										<div class="remove-mobile">WWW.</div>SPONSORED.THEATLANTIC.COM</a>
+  									<a id="link2" href="#"></a>
+  								</div>
+  							</div>
+  						</div>
+  						<div class="row padding-left">
+  							<div class="col-xs-12 card-buttons">
+  								<div class="col-xs-4 padding-none">
+  									<a href="#">
+  										<div class="btn1"><span class="glyphicon glyphicon-thumbs-up"></span>
+  											<p id="btn">Like</p>
+  										</div>
+  									</a>
+  								</div>
+  								<div class="col-xs-4 padding-none">
+  									<a href="#">
+  										<div class="btn2"><span class="glyphicon glyphicon-comment"></span>
+  											<p id="btn">Comment</p>
+  										</div>
+  									</a>
+  								</div>
+  								<div class="col-xs-4 padding-none">
+  									<a href="#">
+  										<div class="btn3"><span class="glyphicon glyphicon-share-alt"></span>
+  											<p id="btn">Share</p>
+  										</div>
+  									</a>
+  								</div>
+  							</div>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  			<div class="col-xs-4" id="mobile">
+  				<div class="cardon">
+  					<div class="well" id="padding-row">
+  						<div class="row card-header">
+  							<div class="col-xs-2" id="header-logo">
+  								<img id="header-logo" src="images/atlantic.jpg">
+  							</div>
+  							<div class="col-xs-4 title-holder">
+  								<h5 id="header-title">Trending</h5>
+  								<div class="inline">
+  									<a href="#">
+  										<p class="" id="sponsored">Sponsored</p><span class="glyphicon glyphicon-globe"></span>
+  									</a>
+  								</div>
+  							</div>
+  							<div class="col-xs-5 performance-holder"> <span id="slide" class="glyphicon glyphicon-stats"></span>
+  							</div>
+  						</div>
+  						<div class="row card-heading">
+  							<div class="col-xs-12">
+  								<p id="heading">Virtues of the Virtual.</p>
+  							</div>
+  						</div>
+  						<div class="slide1 showtable">
+  							<svg id="chart1"></svg>
+  						</div>
+  						<div class="border" id="border1">
+  							<a class="link" href="http:.theatlantic.com/sponsored/xerox-working-better/collaborators-without-borders/646/?preview=NEtZwpeBmZRylDL1RlJ_bxordVk">
+  								<div class="row foo">
+  									<img src="images/test2.jpg">
+  								</div>
+  							</a>
+  							<div class="row card-title">
+  								<div class="col-xs-12">
+  									<h4 id="title">What businesses get wrong about keeping teams productive (Sponsor: Xerox)</h4>
+  								</div>
+  							</div>
+  							<div class="row card-desc">
+  								<div class="col-xs-12">
+  									<p id="desc">The best description you can think of will appear here. Even if you can’t think of a great description, we’ll scrape the description from the meta data in the pager header. This will save you time and steps when packing an ad…</p>
+  								</div>
+  							</div>
+  							<div class="row card-link">
+  								<div class="col-xs-12">
+  									<a id="link1" href="#">
+  										<a id="link1" href="#">
+  											<div class="remove-mobile">WWW.</div>SPONSORED.THEATLANTIC.COM</a>
+  										<a id="link2" href="#"></a>
+  								</div>
+  							</div>
+  						</div>
+  						<div class="row padding-left">
+  							<div class="col-xs-12 card-buttons">
+  								<div class="col-xs-4 padding-none">
+  									<a href="#">
+  										<div class="btn1"><span class="glyphicon glyphicon-thumbs-up"></span>
+  											<p id="btn">Like</p>
+  										</div>
+  									</a>
+  								</div>
+  								<div class="col-xs-4 padding-none">
+  									<a href="#">
+  										<div class="btn2"><span class="glyphicon glyphicon-comment"></span>
+  											<p id="btn">Comment</p>
+  										</div>
+  									</a>
+  								</div>
+  								<div class="col-xs-4 padding-none">
+  									<a href="#">
+  										<div class="btn3"><span class="glyphicon glyphicon-share-alt"></span>
+  											<p id="btn">Share</p>
+  										</div>
+  									</a>
+  								</div>
+  							</div>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  			<div class="cardoff">
+  				<div class="col-xs-4" id="mobile">
+  					<div class="well" id="padding-row">
+  						<div class="row card-header">
+  							<div class="col-xs-2" id="header-logo">
+  								<img id="header-logo" src="images/atlantic.jpg">
+  							</div>
+  							<div class="col-xs-4 title-holder">
+  								<h5 id="header-title">Trending</h5>
+  								<div class="inline">
+  									<a href="#">
+  										<p class="" id="sponsored">Sponsored</p><span class="glyphicon glyphicon-globe"></span>
+  									</a>
+  								</div>
+  							</div>
+  						</div>
+  						<div class="row card-heading">
+  							<div class="col-xs-12">
+  								<p id="heading">The way we're working isn't working.</p>
+  							</div>
+  						</div>
+  						<div class="border">
+  							<a class="link" href="http:.theatlantic.com/sponsored/xerox-working-better/the-workforce-that-keeps-going-and-going-and-going/643/?preview=NEtZwpeBmZRylDL1RlJ_bxordVk">
+  								<div class="row foo">
+  									<img src="images/test3.jpg">
+  								</div>
+  							</a>
+  							<div class="row card-title">
+  								<div class="col-xs-12">
+  									<h4 id="title">The case against teams that just keep going. (Sponsor: Xerox)</h4>
+  								</div>
+  							</div>
+  							<div class="row card-desc">
+  								<div class="col-xs-12">
+  									<p id="desc">The best description you can think of will appear here. Even if you can’t think of a great description, we’ll scrape the description from the meta data in the pager header. This will save you time and steps when packing an ad…</p>
+  								</div>
+  							</div>
+  							<div class="row card-link">
+  								<div class="col-xs-12">
+  									<a id="link1" href="#">
+  										<div class="remove-mobile">WWW.</div>SPONSORED.THEATLANTIC.COM</a>
+  									<a id="link2" href="#"></a>
+  								</div>
+  							</div>
+  						</div>
+  						<div class="row padding-left">
+  							<div class="col-xs-12 card-buttons">
+  								<div class="col-xs-4 padding-none">
+  									<a href="#">
+  										<div class="btn1"><span class="glyphicon glyphicon-thumbs-up"></span>
+  											<p id="btn">Like</p>
+  										</div>
+  									</a>
+  								</div>
+  								<div class="col-xs-4 padding-none">
+  									<a href="#">
+  										<div class="btn2"><span class="glyphicon glyphicon-comment"></span>
+  											<p id="btn">Comment</p>
+  										</div>
+  									</a>
+  								</div>
+  								<div class="col-xs-4 padding-none">
+  									<a href="#">
+  										<div class="btn3"><span class="glyphicon glyphicon-share-alt"></span>
+  											<p id="btn">Share</p>
+  										</div>
+  									</a>
+  								</div>
+  							</div>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  		<div class="row" id="padding-bottom">
+  			<div class="row caret-line">
+  				<div class="col-xs-12"> <span class="glyphicon glyphicon-triangle-top"></span>
+  					<p id="caret-text">The Atlantic Creatives Preview</p>
+  				</div>
+  			</div>
+  			<div class="dr-btn" id="dr-btn2">SHOW OTHER STORIES<span class="glyphicon glyphicon-chevron-down" id="dr-caret"></span>
+  			</div>
+  			<div class="cardoff2">
+  				<div class="col-xs-4" id="mobile">
+  					<div class="well" id="padding-row">
+  						<div class="row card-header">
+  							<div class="col-xs-2" id="header-logo">
+  								<img id="header-logo" src="images/atlantic.jpg">
+  							</div>
+  							<div class="col-xs-4 title-holder">
+  								<h5 id="header-title">Trending</h5>
+  								<div class="inline">
+  									<a href="#">
+  										<p class="" id="sponsored">Sponsored</p><span class="glyphicon glyphicon-globe"></span>
+  									</a>
+  								</div>
+  							</div>
+  						</div>
+  						<div class="row card-heading">
+  							<div class="col-xs-12">
+  								<p id="heading">74% of all employees are reporting a personal energy crisis.</p>
+  							</div>
+  						</div>
+  						<div class="border">
+  							<a class="link" href="http:.theatlantic.com/sponsored/xerox-working-better/the-workforce-that-keeps-going-and-going-and-going/643/?preview=NEtZwpeBmZRylDL1RlJ_bxordVk">
+  								<div class="row foo">
+  									<img src="images/test4.jpg">
+  								</div>
+  							</a>
+  							<div class="row card-title">
+  								<div class="col-xs-12">
+  									<h4 id="title">The Argument Against The Round-The-Clock Schedule. How America’s Best Companies Are Getting More By Asking Less. (Sponsor: Xerox)</h4>
+  								</div>
+  							</div>
+  							<div class="row card-desc">
+  								<div class="col-xs-12">
+  									<p id="desc">The best description you can think of will appear here. Even if you can’t think of a great description, we’ll scrape the description from the meta data in the pager header. This will save you time and steps when packing an ad…</p>
+  								</div>
+  							</div>
+  							<div class="row card-link">
+  								<div class="col-xs-12">
+  									<a id="link1" href="#">
+  										<div class="remove-mobile">WWW.</div>SPONSORED.THEATLANTIC.COM</a>
+  									<a id="link2" href="#"></a>
+  								</div>
+  							</div>
+  						</div>
+  						<div class="row padding-left">
+  							<div class="col-xs-12 card-buttons">
+  								<div class="col-xs-4 padding-none">
+  									<a href="#">
+  										<div class="btn1"><span class="glyphicon glyphicon-thumbs-up"></span>
+  											<p id="btn">Like</p>
+  										</div>
+  									</a>
+  								</div>
+  								<div class="col-xs-4 padding-none">
+  									<a href="#">
+  										<div class="btn2"><span class="glyphicon glyphicon-comment"></span>
+  											<p id="btn">Comment</p>
+  										</div>
+  									</a>
+  								</div>
+  								<div class="col-xs-4 padding-none">
+  									<a href="#">
+  										<div class="btn3"><span class="glyphicon glyphicon-share-alt"></span>
+  											<p id="btn">Share</p>
+  										</div>
+  									</a>
+  								</div>
+  							</div>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  			<div class="cardoff2">
+  				<div class="col-xs-4" id="mobile">
+  					<div class="well" id="padding-row">
+  						<div class="row card-header">
+  							<div class="col-xs-2" id="header-logo">
+  								<img id="header-logo" src="images/atlantic.jpg">
+  							</div>
+  							<div class="col-xs-4 title-holder">
+  								<h5 id="header-title">Trending</h5>
+  								<div class="inline">
+  									<a href="#">
+  										<p class="" id="sponsored">Sponsored</p><span class="glyphicon glyphicon-globe"></span>
+  									</a>
+  								</div>
+  							</div>
+  						</div>
+  						<div class="row card-heading">
+  							<div class="col-xs-12">
+  								<p id="heading">Think having a ping-pong table in the keg room is enough?</p>
+  							</div>
+  						</div>
+  						<div class="border">
+  							<a class="link" href="http:.theatlantic.com/sponsored/xerox-working-better/culture-is-more-than-a-holiday-party/640/?preview=NEtZwpeBmZRylDL1RlJ_bxordVk">
+  								<div class="row foo">
+  									<img src="images/test5.jpg">
+  								</div>
+  							</a>
+  							<div class="row card-title">
+  								<div class="col-xs-12">
+  									<h4 id="title">What The Biggest Companies​ ​ In America Get Wrong About "Culture​"​ (Sponsor: Xerox)</h4>
+  								</div>
+  							</div>
+  							<div class="row card-desc">
+  								<div class="col-xs-12">
+  									<p id="desc">The best description you can think of will appear here. Even if you can’t think of a great description, we’ll scrape the description from the meta data in the pager header. This will save you time and steps when packing an ad…</p>
+  								</div>
+  							</div>
+  							<div class="row card-link">
+  								<div class="col-xs-12">
+  									<a id="link1" href="#">
+  										<div class="remove-mobile">WWW.</div>SPONSORED.THEATLANTIC.COM</a>
+  									<a id="link2" href="#"></a>
+  								</div>
+  							</div>
+  						</div>
+  						<div class="row padding-left">
+  							<div class="col-xs-12 card-buttons">
+  								<div class="col-xs-4 padding-none">
+  									<a href="#">
+  										<div class="btn1"><span class="glyphicon glyphicon-thumbs-up"></span>
+  											<p id="btn">Like</p>
+  										</div>
+  									</a>
+  								</div>
+  								<div class="col-xs-4 padding-none">
+  									<a href="#">
+  										<div class="btn2"><span class="glyphicon glyphicon-comment"></span>
+  											<p id="btn">Comment</p>
+  										</div>
+  									</a>
+  								</div>
+  								<div class="col-xs-4 padding-none">
+  									<a href="#">
+  										<div class="btn3"><span class="glyphicon glyphicon-share-alt"></span>
+  											<p id="btn">Share</p>
+  										</div>
+  									</a>
+  								</div>
+  							</div>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  			<div class="col-xs-4" id="mobile">
+  				<div class="cardon">
+  					<div class="well" id="padding-row">
+  						<div class="row card-header">
+  							<div class="col-xs-2" id="header-logo">
+  								<img id="header-logo" src="images/atlantic.jpg">
+  							</div>
+  							<div class="col-xs-4 title-holder">
+  								<h5 id="header-title">Trending</h5>
+  								<div class="inline">
+  									<a href="#">
+  										<p class="" id="sponsored">Sponsored</p><span class="glyphicon glyphicon-globe"></span>
+  									</a>
+  								</div>
+  							</div>
+  							<div class="col-xs-5 performance-holder"> <span id="slide2" class="glyphicon glyphicon-stats"></span>
+  							</div>
+  						</div>
+  						<div class="row card-heading">
+  							<div class="col-xs-12">
+  								<p id="heading">Is your company too focused on being trendy to notice trends?</p>
+  							</div>
+  						</div>
+  						<div class="slide2 showtable">
+  							<svg id="chart2"></svg>
+  						</div>
+  						<div class="border" id="border2">
+  							<a class="link" href="http:.theatlantic.com/sponsored/xerox-working-better/culture-is-more-than-a-holiday-party/640/?preview=NEtZwpeBmZRylDL1RlJ_bxordVk">
+  								<div class="row foo">
+  									<img src="images/test6.jpg">
+  								</div>
+  							</a>
+  							<div class="row card-title">
+  								<div class="col-xs-12">
+  									<h4 id="title">What The Biggest Companies​ ​ In America Get Wrong About "Culture​"​ (Sponsor: Xerox)</h4>
+  								</div>
+  							</div>
+  							<div class="row card-desc">
+  								<div class="col-xs-12">
+  									<p id="desc">The best description you can think of will appear here. Even if you can’t think of a great description, we’ll scrape the description from the meta data in the pager header. This will save you time and steps when packing an ad…</p>
+  								</div>
+  							</div>
+  							<div class="row card-link">
+  								<div class="col-xs-12">
+  									<a id="link1" href="#">
+  										<div class="remove-mobile">WWW.</div>SPONSORED.THEATLANTIC.COM</a>
+  									<a id="link2" href="#"></a>
+  								</div>
+  							</div>
+  						</div>
+  						<div class="row padding-left">
+  							<div class="col-xs-12 card-buttons">
+  								<div class="col-xs-4 padding-none">
+  									<a href="#">
+  										<div class="btn1"><span class="glyphicon glyphicon-thumbs-up"></span>
+  											<p id="btn">Like</p>
+  										</div>
+  									</a>
+  								</div>
+  								<div class="col-xs-4 padding-none">
+  									<a href="#">
+  										<div class="btn2"><span class="glyphicon glyphicon-comment"></span>
+  											<p id="btn">Comment</p>
+  										</div>
+  									</a>
+  								</div>
+  								<div class="col-xs-4 padding-none">
+  									<a href="#">
+  										<div class="btn3"><span class="glyphicon glyphicon-share-alt"></span>
+  											<p id="btn">Share</p>
+  										</div>
+  									</a>
+  								</div>
+  							</div>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  			<div class="row" id="padding-bottom">
+  				<div class="row caret-line">
+  					<div class="col-xs-12"> <span class="glyphicon glyphicon-triangle-top"></span>
+  						<p id="caret-text">The Atlantic Creatives Preview</p>
+  					</div>
+  				</div>
+  				<div class="dr-btn" id="dr-btn3">SHOW OTHER STORIES<span class="glyphicon glyphicon-chevron-down" id="dr-caret"></span>
+  				</div>
+  				<div class="cardoff3">
+  					<div class="col-xs-4" id="mobile">
+  						<div class="well" id="padding-row">
+  							<div class="row card-header">
+  								<div class="col-xs-2" id="header-logo">
+  									<img id="header-logo" src="images/atlantic.jpg">
+  								</div>
+  								<div class="col-xs-4 title-holder">
+  									<h5 id="header-title">Trending</h5>
+  									<div class="inline">
+  										<a href="#">
+  											<p class="" id="sponsored">Sponsored</p><span class="glyphicon glyphicon-globe"></span>
+  										</a>
+  									</div>
+  								</div>
+  							</div>
+  							<div class="row card-heading">
+  								<div class="col-xs-12">
+  									<p id="heading">The truth is, it’s simpler than most would assume</p>
+  								</div>
+  							</div>
+  							<div class="border">
+  								<a class="link" href="http:.theatlantic.com/sponsored/xerox-working-better/leaders-of-leaders-how-to-multiply-talent-from-the-inside-out/637/?preview=NEtZwpeBmZRylDL1RlJ_bxordVk">
+  									<div class="row foo">
+  										<img src="images/test7.jpg">
+  									</div>
+  								</a>
+  								<div class="row card-title">
+  									<div class="col-xs-12">
+  										<h4 id="title">Extraordinary Leaders Transform Teams They Lead Because They Understand These Core Principles (Sponsor: Xerox)</h4>
+  									</div>
+  								</div>
+  								<div class="row card-desc">
+  									<div class="col-xs-12">
+  										<p id="desc">The best description you can think of will appear here. Even if you can’t think of a great description, we’ll scrape the description from the meta data in the pager header. This will save you time and steps when packing an ad…</p>
+  									</div>
+  								</div>
+  								<div class="row card-link">
+  									<div class="col-xs-12">
+  										<a id="link1" href="#">
+  											<div class="remove-mobile">WWW.</div>SPONSORED.THEATLANTIC.COM</a>
+  										<a id="link2" href="#"></a>
+  									</div>
+  								</div>
+  							</div>
+  							<div class="row padding-left">
+  								<div class="col-xs-12 card-buttons">
+  									<div class="col-xs-4 padding-none">
+  										<a href="#">
+  											<div class="btn1"><span class="glyphicon glyphicon-thumbs-up"></span>
+  												<p id="btn">Like</p>
+  											</div>
+  										</a>
+  									</div>
+  									<div class="col-xs-4 padding-none">
+  										<a href="#">
+  											<div class="btn2"><span class="glyphicon glyphicon-comment"></span>
+  												<p id="btn">Comment</p>
+  											</div>
+  										</a>
+  									</div>
+  									<div class="col-xs-4 padding-none">
+  										<a href="#">
+  											<div class="btn3"><span class="glyphicon glyphicon-share-alt"></span>
+  												<p id="btn">Share</p>
+  											</div>
+  										</a>
+  									</div>
+  								</div>
+  							</div>
+  						</div>
+  					</div>
+  				</div>
+  				<div class="col-xs-4" id="mobile">
+  					<div class="cardon">
+  						<div class="well" id="padding-row">
+  							<div class="row card-header">
+  								<div class="col-xs-2" id="header-logo">
+  									<img id="header-logo" src="images/atlantic.jpg">
+  								</div>
+  								<div class="col-xs-4 title-holder">
+  									<h5 id="header-title">Trending</h5>
+  									<div class="inline">
+  										<a href="#">
+  											<p class="" id="sponsored">Sponsored</p><span class="glyphicon glyphicon-globe"></span>
+  										</a>
+  									</div>
+  								</div>
+  								<div class="col-xs-5 performance-holder"> <span id="slide3" class="glyphicon glyphicon-stats"></span>
+  								</div>
+  							</div>
+  							<div class="row card-heading">
+  								<div class="col-xs-12">
+  									<p id="heading">Meaning & purpose inspire teams to be the best versions of themselves</p>
+  								</div>
+  							</div>
+  							<div class="slide3 showtable">
+  								<svg id="chart3"></svg>
+  							</div>
+  							<div class="border" id="border3">
+  								<a class="link" href="http:.theatlantic.com/sponsored/xerox-working-better/leaders-of-leaders-how-to-multiply-talent-from-the-inside-out/637/?preview=NEtZwpeBmZRylDL1RlJ_bxordVk">
+  									<div class="row foo">
+  										<img src="images/test8.jpg">
+  									</div>
+  								</a>
+  								<div class="row card-title">
+  									<div class="col-xs-12">
+  										<h4 id="title">Extraordinary Leaders Transform Teams They Lead Because They Understand These Core Principles (Sponsor: Xerox)</h4>
+  									</div>
+  								</div>
+  								<div class="row card-desc">
+  									<div class="col-xs-12">
+  										<p id="desc">The best description you can think of will appear here. Even if you can’t think of a great description, we’ll scrape the description from the meta data in the pager header. This will save you time and steps when packing an ad…</p>
+  									</div>
+  								</div>
+  								<div class="row card-link">
+  									<div class="col-xs-12">
+  										<a id="link1" href="#">
+  											<div class="remove-mobile">WWW.</div>SPONSORED.THEATLANTIC.COM</a>
+  										<a id="link2" href="#"></a>
+  									</div>
+  								</div>
+  							</div>
+  							<div class="row padding-left">
+  								<div class="col-xs-12 card-buttons">
+  									<div class="col-xs-4 padding-none">
+  										<a href="#">
+  											<div class="btn1"><span class="glyphicon glyphicon-thumbs-up"></span>
+  												<p id="btn">Like</p>
+  											</div>
+  										</a>
+  									</div>
+  									<div class="col-xs-4 padding-none">
+  										<a href="#">
+  											<div class="btn2"><span class="glyphicon glyphicon-comment"></span>
+  												<p id="btn">Comment</p>
+  											</div>
+  										</a>
+  									</div>
+  									<div class="col-xs-4 padding-none">
+  										<a href="#">
+  											<div class="btn3"><span class="glyphicon glyphicon-share-alt"></span>
+  												<p id="btn">Share</p>
+  											</div>
+  										</a>
+  									</div>
+  								</div>
+  							</div>
+  						</div>
+  					</div>
+  				</div>
+  				<div class="cardoff3">
+  					<div class="col-xs-4" id="mobile">
+  						<div class="well" id="padding-row">
+  							<div class="row card-header">
+  								<div class="col-xs-2" id="header-logo">
+  									<img id="header-logo" src="images/atlantic.jpg">
+  								</div>
+  								<div class="col-xs-4 title-holder">
+  									<h5 id="header-title">Trending</h5>
+  									<div class="inline">
+  										<a href="#">
+  											<p class="" id="sponsored">Sponsored</p><span class="glyphicon glyphicon-globe"></span>
+  										</a>
+  									</div>
+  								</div>
+  							</div>
+  							<div class="row card-heading">
+  								<div class="col-xs-12">
+  									<p id="heading">Bite-sized wisdom from the best</p>
+  								</div>
+  							</div>
+  							<div class="border">
+  								<a class="link" href="http:.theatlantic.com/sponsored/xerox-working-better/working-better/625/?preview=NEtZwpeBmZRylDL1RlJ_bxordVk">
+  									<div class="row foo">
+  										<img src="images/test9.jpg">
+  									</div>
+  								</a>
+  								<div class="row card-title">
+  									<div class="col-xs-12">
+  										<h4 id="title">Secrets From Leaders Of The World’s Most Productive and Successful Companies Revealed (Sponsor: Xerox)</h4>
+  									</div>
+  								</div>
+  								<div class="row card-desc">
+  									<div class="col-xs-12">
+  										<p id="desc">The best description you can think of will appear here. Even if you can’t think of a great description, we’ll scrape the description from the meta data in the pager header. This will save you time and steps when packing an ad…</p>
+  									</div>
+  								</div>
+  								<div class="row card-link">
+  									<div class="col-xs-12">
+  										<a id="link1" href="#">
+  											<div class="remove-mobile">WWW.</div>SPONSORED.THEATLANTIC.COM</a>
+  										<a id="link2" href="#"></a>
+  									</div>
+  								</div>
+  							</div>
+  							<div class="row padding-left">
+  								<div class="col-xs-12 card-buttons">
+  									<div class="col-xs-4 padding-none">
+  										<a href="#">
+  											<div class="btn1"><span class="glyphicon glyphicon-thumbs-up"></span>
+  												<p id="btn">Like</p>
+  											</div>
+  										</a>
+  									</div>
+  									<div class="col-xs-4 padding-none">
+  										<a href="#">
+  											<div class="btn2"><span class="glyphicon glyphicon-comment"></span>
+  												<p id="btn">Comment</p>
+  											</div>
+  										</a>
+  									</div>
+  									<div class="col-xs-4 padding-none">
+  										<a href="#">
+  											<div class="btn3"><span class="glyphicon glyphicon-share-alt"></span>
+  												<p id="btn">Share</p>
+  											</div>
+  										</a>
+  									</div>
+  								</div>
+  							</div>
+  						</div>
+  					</div>
+  				</div>
+  				<div class="row caret-line">
+  					<div class="col-xs-12"> <span class="glyphicon glyphicon-triangle-top"></span>
+  						<p id="caret-text">The Atlantic Creatives Preview</p>
+  					</div>
+  				</div>
+  				<div class="cardon">
+  					<div class="col-xs-4" id="mobile">
+  						<div class="well" id="padding-row">
+  							<div class="row card-header">
+  								<div class="col-xs-2" id="header-logo">
+  									<img id="header-logo" src="images/atlantic.jpg">
+  								</div>
+  								<div class="col-xs-4 title-holder">
+  									<h5 id="header-title">Trending</h5>
+  									<div class="inline">
+  										<a href="#">
+  											<p class="" id="sponsored">Sponsored</p><span class="glyphicon glyphicon-globe"></span>
+  										</a>
+  									</div>
+  								</div>
+  							</div>
+  							<div class="row card-heading">
+  								<div class="col-xs-12">
+  									<p id="heading">Bite-sized wisdom to lead your organization like the best in the world</p>
+  								</div>
+  							</div>
+  							<div class="border">
+  								<a class="link" href="http:.theatlantic.com/sponsored/xerox-working-better/working-better/625/?preview=NEtZwpeBmZRylDL1RlJ_bxordVk">
+  									<div class="row foo">
+  										<img src="images/test10.jpg">
+  									</div>
+  								</a>
+  								<div class="row card-title">
+  									<div class="col-xs-12">
+  										<h4 id="title">Secrets From Leaders Of The World’s Most Productive and Successful Companies Revealed (Sponsor: Xerox)</h4>
+  									</div>
+  								</div>
+  								<div class="row card-desc">
+  									<div class="col-xs-12">
+  										<p id="desc">The best description you can think of will appear here. Even if you can’t think of a great description, we’ll scrape the description from the meta data in the pager header. This will save you time and steps when packing an ad…</p>
+  									</div>
+  								</div>
+  								<div class="row card-link">
+  									<div class="col-xs-12">
+  										<a id="link1" href="#">
+  											<div class="remove-mobile">WWW.</div>SPONSORED.THEATLANTIC.COM</a>
+  										<a id="link2" href="#"></a>
+  									</div>
+  								</div>
+  							</div>
+  							<div class="row padding-left">
+  								<div class="col-xs-12 card-buttons">
+  									<div class="col-xs-4 padding-none">
+  										<a href="#">
+  											<div class="btn1"><span class="glyphicon glyphicon-thumbs-up"></span>
+  												<p id="btn">Like</p>
+  											</div>
+  										</a>
+  									</div>
+  									<div class="col-xs-4 padding-none">
+  										<a href="#">
+  											<div class="btn2"><span class="glyphicon glyphicon-comment"></span>
+  												<p id="btn">Comment</p>
+  											</div>
+  										</a>
+  									</div>
+  									<div class="col-xs-4 padding-none">
+  										<a href="#">
+  											<div class="btn3"><span class="glyphicon glyphicon-share-alt"></span>
+  												<p id="btn">Share</p>
+  											</div>
+  										</a>
+  									</div>
+  								</div>
+  							</div>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+      
+      <script src="js/script.js"></script>
+  		<script type="text/javascript">
+  			$(function() {
+  			              $('[data-toggle="tooltip"]').tooltip()
+  			          });
+  		</script>
+  </body>
+
+</html>
