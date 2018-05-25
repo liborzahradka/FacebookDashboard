@@ -3,7 +3,7 @@
 
 Facebook dashboard showing performance of each ad.
 
-You can find full product on [GitHub.io](https://liborzahradka.github.io/FacebookDashboard/).
+You can find full product on [GitHub](https://liborzahradka.github.io/FacebookDashboard/).
 
 ## Built With
 
@@ -29,3 +29,4 @@ We use [Heroku](https://heroku.com/) for versioning and deploy.
 * [NVD3.JS](https://highlightjs.org)
 * [D3](https://d3js.org)
 * [ANIMATED NUMBERS](http://aishek.github.io/jquery-animateNumber/)
+* [BOOTSTRAP](https://getbootstrap.com)
